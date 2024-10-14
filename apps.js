@@ -65,8 +65,7 @@ Exercise 5: Insert an element between two others
 
 Complete Exercise 5 in the space below:
 */
-
-foods.splice("2","0","tofu")
+foods.splice(2,0,'tofu')
 console.log (foods)
 console.log('Exercise 5 result:', foods);
 
@@ -78,10 +77,10 @@ Exercise 6: Replace elements
 Complete Exercise 6 in the space below:
 */
 
-foods.splice("1","1", "sushi","cupcake");
+foods.splice(1,1, 'sushi','cupcake'); // No quotes around numbers
 console.log(foods)
 
-console.log('Exercise 6 result:', foods);
+console.log('Exercise 6 result:',foods);
 
 /*
 Exercise 7: Using the `slice()` method
@@ -130,7 +129,7 @@ Note: The final result should log as:
 Complete Exercise 9 in the space below:
 */
 
-let allFoods = foods.join("->");// taco -> sushi-> cupcake -> tofu -> cheeseburger
+let allFoods = foods.join(' -> ');// taco -> sushi-> cupcake -> tofu -> cheeseburger
 console.log('Exercise 9 result:', allFoods);
 
 /*
@@ -143,7 +142,8 @@ Exercise 10: Check for an element
 
 Complete Exercise 10 in the space below:
 */
-const hasSoup=foods.includes("soup","0");
+const hasSoup =
+foods.includes('soup');
 
 
 console.log('Exercise 10 result:', hasSoup);
@@ -163,20 +163,39 @@ Complete Exercise 11 in the space below:
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 
-
-for (let i=0; i< nums.lenghth; i++) {
+let odds = [];
+for (let i=0; i< nums.length; i++) {
 if (nums[i]% 2 ===1) {
   odds.push(nums[i]);
 
 }
 }
-let odds= [];
-function oddNumbers(value) {
-            if ( value % 2 === 1 ) {
-                odds.push(value);
-            }
-        }
-         nums.forEach(oddNumbers);
+//let odds = []; 
+nums.forEach(nums => 
+   { if (nums % 2 === 1) 
+      odds.push(nums); });
+   console.log(nums[i])
+
+
+   //const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+   // let odds = [];
+   // for (let i = 0; i < nums.length; i++) {
+   // console.log(nums[i])
+   // let num = nums[i]
+   //if (num % 2 !==0){
+   // console.log(num, "inside odd number")
+// odds.push(nums)
+// console.log(nums[i])
+   //} 
+
+   //}
+//let odds= [];
+//function oddNumbers(value) {
+            //if ( value % 2 === 1 ) {
+                //odds.push(value);
+            //}
+        //}
+         //nums.forEach(oddNumbers);
 
 
 
@@ -262,7 +281,7 @@ Exercise 14: Accessing within nested arrays
 Complete Exercise 14 in the space below:
 */
 
-let num = numArrays ["1","2"]
+let num = numArrays [2][1];
 
 
 console.log('Exercise 14 result:', num);
